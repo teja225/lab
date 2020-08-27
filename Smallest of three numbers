@@ -1,0 +1,17 @@
+print("enter three numbers")
+a=input(int())
+b=input(int())
+c=input(int())
+if a<b and a<c:
+  print("smallest number is",a) 
+elif b<c and b<a:
+  print("smallest number is",b) 
+else:
+  print("smallest number is",c)
+
+Output:
+Enter three number
+  04
+  03
+  05
+Smallest number is 3
