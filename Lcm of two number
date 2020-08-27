@@ -1,0 +1,19 @@
+print("enter two numbers")
+a=int(input())
+b=int(input())
+if a>b:
+  gre=a
+else:
+  gre=b
+while(True):
+  if gre % a ==0 and gre % b ==0:
+    lcm = gre
+    break
+  gre = gre+1
+print("lcm of is",lcm)
+
+Output
+Enter two number
+  4
+  6
+Lcm of is 12
