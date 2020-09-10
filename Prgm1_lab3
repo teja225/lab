@@ -1,0 +1,13 @@
+copy contents from one array to another array
+A1 = [1,2,3,4]
+A2=[None] *len(A1)
+print("Array 1: ",A1)
+for i in range(0,len(A1)):
+    A2[i] = A1[i]
+print("Array 2: ",A2)
+
+
+
+Output:
+Array1:[1, 2,3,4]
+Array2:[1, 2,3,4]
