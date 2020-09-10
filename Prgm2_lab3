@@ -1,0 +1,11 @@
+assigning reverse of one array to another array
+A1 = [1,2,3,4,5]
+A2 = [None] *len(A1)
+print("Array 1 : ",A1)
+for i in range(0,len(A1)):
+    A2[i] = A1[len(A1)-i-1]
+print("Array 2 : ",A2)
+
+Output:
+Array 1 :  [1, 2, 3, 4, 5]
+Array 2 :  [5, 4, 3, 2, 1]
