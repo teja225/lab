@@ -1,0 +1,27 @@
+#swapping of two numbers
+print("enter two numbers: ")
+a = int(input())
+b = int(input())
+#before swapping
+print("before swapping")
+print("number1: ",a)
+print("number2: ",b)
+x = a
+a = b
+b = x
+#after swapping
+print("after swapping")
+print("number1: ",a)
+print("number2: ",b)
+
+Output:
+
+enter two numbers: 
+2
+6
+before swapping
+number1:  2
+number2:  6
+after swapping
+number1:  6
+number2:  2
