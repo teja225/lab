@@ -1,0 +1,16 @@
+#checking a number is perfect number or not
+print("enter a number: ")
+a = int(input())
+sum = 0
+for i in range(1,a) :
+    if (a%i == 0) :
+        sum = sum + i
+if (a == sum) :
+    print(str(a)+" is a perfect number")
+else :
+    print(str(a)+" is not a perfect number")
+
+Output:
+enter a number: 
+6
+6 is a perfect number
