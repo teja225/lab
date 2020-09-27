@@ -1,3 +1,4 @@
+# sparse matrix by function
 def displayMatrix(matrix):
     for row in matrix:
         for element in row:
