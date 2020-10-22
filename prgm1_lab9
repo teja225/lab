@@ -1,4 +1,5 @@
-#Represent a node of doubly linked list    
+creating a double linked list and adding certain nodes
+#Represent a node of doubly linked list
 class Node:    
     def __init__(self,data):    
         self.data = data;    
