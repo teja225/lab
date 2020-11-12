@@ -1,0 +1,18 @@
+#finding the second smallest element in the array
+a = []
+n = int(input("enter the size of the array: "))
+print("enter "+str(n)+" numbers : ")
+for i in range(n):
+    b = int(input())
+    a.append(b)
+a.sort()
+print("the smallest element is "+str(a[1]))
+
+output:enter the size of the array: 5
+enter 5 numbers : 
+3
+2
+5
+4
+1
+the smallest element is 2
