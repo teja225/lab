@@ -52,3 +52,17 @@ print(a)
 mergeSort(a) 
 print("Sorted array is ") 
 print(a)
+
+
+output:
+enter size:5
+values:
+1
+2
+3
+45
+4
+Given array is 
+[1, 2, 3, 45, 4]
+Sorted array is 
+[1, 2, 3, 45, 4]
