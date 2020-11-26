@@ -1,0 +1,19 @@
+#selection sort using recursion
+def minIndex(a,i,j): 
+    if i == j: 
+        return i  
+    k = minIndex(a, i + 1, j)
+    return (i if a[i] < a[k] else k) 
+def recurSelectionSort(a, n, index = 0): 
+    if index == n: 
+        return -1 
+    k = minIndex(a, index, n-1) 
+    if k != index: 
+        a[k], a[index] = a[index], a[k]
+    recurSelectionSort(a, n, index + 1)
+arr = [5,1,3,2,4] 
+n = len(arr)  
+recurSelectionSort(arr, n)
+for i in arr:
+    print(i, end = ' ')
+Outp1 2 3 4 5
