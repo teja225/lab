@@ -1,0 +1,122 @@
+#Create a tree with at least 12 nodes and perform in-order, pre-order, and post-order traversal to print the values present at the nodes.
+class Node: 
+    def __init__(self,n): 
+        self.left = None
+        self.right = None
+        self.n = n
+def insert(root,n1): 
+    if root is None: 
+        return Node(n1) 
+    else: 
+        if root.n == n1: 
+            return root 
+        elif root.n < n1: 
+            root.right = insert(root.right,n1) 
+        else: 
+            root.left = insert(root.left,n1) 
+    return root
+def order(root):
+    if root:
+        order(root.left)
+        print(root.n)
+        order(root.right)
+def printInorder(root): 
+    if root: 
+        printInorder(root.left) 
+        print(root.n)
+        printInorder(root.right) 
+def printPostorder(root): 
+    if root: 
+        printPostorder(root.left)
+        printPostorder(root.right) 
+        print(root.n) 
+def printPreorder(root): 
+    if root: 
+        print(root.n) 
+        printPreorder(root.left)
+        printPreorder(root.right)
+k = int(input("enter the number for root node : "))
+root = Node(k)
+print("enter the 12 nodes : ")
+for i in range(12):
+    a = int(input())
+    root = insert(root,a)
+print("printing the binary tree: ")
+order(root)
+print("Preorder traversal of binary tree is : ")
+printPreorder(root) 
+print("Inorder traversal of binary tree is : ")
+printInorder(root) 
+print("Postorder traversal of binary tree is : ")
+printPostorder(root)
+
+
+output:
+
+
+enter the number for root node : 12
+enter the 12 nodes : 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+printing the binary tree: 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Preorder traversal of binary tree is : 
+12
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+Inorder traversal of binary tree is : 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Postorder traversal of binary tree is : 
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+12
