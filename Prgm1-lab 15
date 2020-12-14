@@ -1,0 +1,50 @@
+class Node:
+    def __init__(self,n):
+        self.left = None
+        self.right = None
+        self.n = n
+def insert(root,n1): 
+    if root is None: 
+        return Node(n1) 
+    else: 
+        if root.n == n1: 
+            return root 
+        elif root.n < n1: 
+            root.right = insert(root.right,n1) 
+        else: 
+            root.left = insert(root.left,n1) 
+    return root
+def order(root):
+    if root:
+        order(root.left)
+        print(root.n)
+        order(root.right)
+def sumofBT( root) : 
+    if (root == None): 
+        return 0
+    return (root.n + sumofBT(root.left) + sumofBT(root.right))
+k = int(input("enter the number for root node : "))
+root = Node(k)
+print("enter the 5 nodes : ")
+for i in range(5):
+    a = int(input())
+    root = insert(root,a)
+print("printing the binary tree: ")
+order(root)
+sumof = sumofBT(root)  
+print("Sum of all the nodes is:", sumof)
+output:
+enter the number for root node : 1
+enter the 5 nodes : 
+1
+2
+3
+4
+5
+printing the binary tree: 
+1
+2
+3
+4
+5
+Sum of all the nodes is: 15
